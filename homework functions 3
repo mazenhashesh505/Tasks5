@@ -1,0 +1,88 @@
+#include <iostream>
+using namespace std;
+
+
+int
+menu ()
+{
+  int choice = -1;
+  for (; choice == -1;)
+	{
+	  cout << "1) Add 2 numbers\n";
+	  cout << "2) subtract 2 numbers\n";
+	  cout << "3) multiply 2 numbers\n";
+	  cout << "4) divide 2 numbers\n";
+
+	  cin >> choice;
+	  if (!(1 <= choice && choice <= 4))
+		{
+		  cout << "please try again \n ";
+		  choice = -1;
+		}
+	}
+  return choice;
+}
+
+void
+sum (int a, int b)
+{
+  cout << "enter two numbers:\n ";
+  cin >> a >> b;
+  cout << a << "+" << b << "=" << a + b << "\n";
+}
+
+void
+sub (int a, int b)
+{
+  cout << "enter two numbers:\n ";
+  cin >> a >> b;
+  cout << a << "-" << b << "=" << a - b << "\n";
+}
+
+void
+multiply (double a, double b)
+{
+  cout << "enter two numbers:\n ";
+  cin >> a >> b;
+  cout << a << "*" << b << "=" << a * b << "\n";
+}
+
+void
+divide (double a, double b)
+{
+  cout << "enter two numbers:\n ";
+  cin >> a >> b;
+  cout << a << "/" << b << "=" << a / b << "\n";
+}
+
+void
+calc (int a, int b)
+{
+
+  while (true)
+	{
+	  int choice = menu ();
+
+	  if (choice == 1)
+		sum (a, b);
+	  else if (choice == 2)
+		sub (a, b);
+	  else if (choice == 3)
+		multiply (a, b);
+	  else if (choice == 4)
+		divide (a, b);
+	  else
+		break;
+	}
+}
+
+
+int
+main ()
+{
+  int x, y;
+
+  calc (x, y);
+  return 0;
+
+}

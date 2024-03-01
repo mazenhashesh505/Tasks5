@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+int
+max (int a = -100000, int b = -1000000, int c = -1000000, int d =
+	 -1000000, int e = -1000000, int f = -1000000)
+{
+  int max = -1;
+
+  if (max <= a)
+	max = a;
+
+  if (max <= b)
+	max = b;
+
+  if (max <= c)
+	max = c;
+
+  if (max <= d)
+	max = d;
+
+  if (max <= e)
+	max = e;
+
+  if (max <= f)
+	max = f;
+
+  return max;
+}
+
+
+
+int
+main ()
+{
+  int a, b, c, d, e, f;
+
+  cout << "enter 6 numbers : \n";
+  cout <<
+	"(but if you want less than 6 numbers enter the numbers and enter -1000000 to be the total numbers is 6)\n:";
+
+  cin >> a >> b >> c >> d >> e >> f;
+
+  cout << max (a, b, c, d, e, f);
+
+  return 0;
+
+}
